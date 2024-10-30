@@ -15,6 +15,20 @@ namespace CS_From
         public Form1()
         {
             InitializeComponent();
+
+
+            TestButton testButton = new TestButton();
+
+            Controls.Add(testButton);
         }
+
+
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+       
     }
 }
