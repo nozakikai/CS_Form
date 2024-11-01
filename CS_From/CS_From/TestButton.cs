@@ -11,7 +11,7 @@ namespace CS_From
 {
     class TestButton:Button
     {
-        public TestButton(int x,int y,int width ,int height)
+        public TestButton(int id,int x,int y,int width ,int height)
         {
             ///コンストラクタ
             ///クラスを生成したときに呼び出される
@@ -20,12 +20,14 @@ namespace CS_From
             Click += OnClick;
 
             //ボタン内に文字を表示させる
-            Text = "ボタンです";
+            Text = id.ToString();
 
+            //ボタンの生成場所を指定する
             Location = new Point(x,y);
-            { 
-                Size = new Size(width,height);
-            }
+
+            //ボタンの大きさを設定する
+            Size = new Size(width,height);
+            
 
         }
 
