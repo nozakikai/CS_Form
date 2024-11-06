@@ -1,29 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace CS_From
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form    
     {
+        TestLabel _testLabel;
         public Form1()
         {
             InitializeComponent();
 
             for (int i = 0; i < 10; i++)
-            { 
-                    TestButton testButton = new TestButton(i,i%3 * 100, i/3 *100, 100, 100);
-                    Controls.Add(testButton);
-                
-               
-
-
+            {
+                TestButton testButton = new TestButton(this,i, (i % 3) * 100, (i / 3) * 100, 100, 100);
+                Controls.Add(testButton);
             }
             //TestButton testButton = new TestButton(400,40,100,100);
             // Controls.Add(testButton);
@@ -54,15 +44,18 @@ namespace CS_From
             //
             // TestButton testButton10 = new TestButton(200, 120, 50, 40);
             // Controls.Add(testButton10);
+             _testLabel = new TestLabel("ラベルと申します", 100, 300, 100, 500);
+            Controls.Add(_testLabel);
+           
         }
 
+        
 
-
-        private void Form1_Load(object sender, EventArgs e)
+        public void LabelTextUpdate(string str)
         {
-
+            _testLabel.TextUpdate(str);
         }
 
-       
+
     }
 }

@@ -11,8 +11,11 @@ namespace CS_From
 {
     class TestButton:Button
     {
-        public TestButton(int id,int x,int y,int width ,int height)
+        Form1 _form1;
+
+        public TestButton(Form1 form1,int id,int x,int y,int width ,int height)
         {
+            _form1 = form1; 
             ///コンストラクタ
             ///クラスを生成したときに呼び出される
             //ClickイベントにOnClick 関数を登録
@@ -31,9 +34,10 @@ namespace CS_From
 
         }
 
-        public void OnClick(object sender, EventArgs e) 
+        public void OnClick(object sender, EventArgs s) 
         {
-            MessageBox.Show("三代目雷影　佐久間唯斗");
+              _form1.LabelTextUpdate(Text);
+           
         }
     }
 }
