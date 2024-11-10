@@ -13,7 +13,7 @@ namespace CS_From
     {
         Form1 _form1;
 
-        public TestButton(Form1 form1,int id,int x,int y,int width ,int height)
+        public TestButton(Form1 form1,string moji,int x,int y,int width ,int height)
         {
             _form1 = form1; 
             ///コンストラクタ
@@ -23,7 +23,7 @@ namespace CS_From
             Click += OnClick;
 
             //ボタン内に文字を表示させる
-            Text = id.ToString();
+            Text = moji.ToString();
 
             //ボタンの生成場所を指定する
             Location = new Point(x,y);

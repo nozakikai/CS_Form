@@ -9,10 +9,10 @@ namespace CS_From
         public Form1()
         {
             InitializeComponent();
-
+            string[] STR = new string[] {"ONE:1","TWO:2","THREE:3","FOUR:4","FIVE:5","SIX:6","SEVEN:7","EIGHT:8","NINE:9" ,"TEN:10"};
             for (int i = 0; i < 10; i++)
             {
-                TestButton testButton = new TestButton(this,i, (i % 3) * 100, (i / 3) * 100, 100, 100);
+                TestButton testButton = new TestButton(this, STR[i], (i % 3) * 100, (i / 3) * 100, 100, 100);
                 Controls.Add(testButton);
             }
             //TestButton testButton = new TestButton(400,40,100,100);
