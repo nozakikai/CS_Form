@@ -6,10 +6,11 @@ namespace CS_From
     public partial class Form1 : Form    
     {
         TestLabel _testLabel;
+        TestTextBox _testBox;
         public Form1()
         {
             InitializeComponent();
-            string[] STR = new string[] {"ONE:1","TWO:2","THREE:3","FOUR:4","FIVE:5","SIX:6","SEVEN:7","EIGHT:8","NINE:9" ,"TEN:10"};
+            string[] STR = new string[] {"あか","あお","きいろ","みどり","おれんじ","ちゃいろ","むらさき","はだいろ","しろ" ,"くろ"};
             for (int i = 0; i < 10; i++)
             {
                 TestButton testButton = new TestButton(this, STR[i], (i % 3) * 100, (i / 3) * 100, 100, 100);
@@ -44,9 +45,11 @@ namespace CS_From
             //
             // TestButton testButton10 = new TestButton(200, 120, 50, 40);
             // Controls.Add(testButton10);
-             _testLabel = new TestLabel("ラベルと申します", 100, 300, 100, 500);
+             _testLabel = new TestLabel("ラベルと申します", 10, 400, 500, 100);
             Controls.Add(_testLabel);
            
+            _testBox = new TestTextBox("テキストボックスです",10,500,500,100);
+            Controls.Add(_testBox);
         }
 
         
@@ -55,7 +58,7 @@ namespace CS_From
         {
             _testLabel.TextUpdate(str);
         }
-
+        
 
     }
 }

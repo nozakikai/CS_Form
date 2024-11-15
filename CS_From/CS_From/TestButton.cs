@@ -37,7 +37,11 @@ namespace CS_From
         public void OnClick(object sender, EventArgs s) 
         {
               _form1.LabelTextUpdate(Text);
-           
+
+              
         }
+
+
     }
+
 }
