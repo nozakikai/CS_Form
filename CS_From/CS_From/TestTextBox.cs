@@ -26,5 +26,11 @@ namespace CS_From
 
            
         }
+
+        public void TextUpdate(string str)
+        {
+            Text = str;
+
+        }
     }
 }

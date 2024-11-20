@@ -16,6 +16,9 @@ namespace CS_From
                 TestButton testButton = new TestButton(this, STR[i], (i % 3) * 100, (i / 3) * 100, 100, 100);
                 Controls.Add(testButton);
             }
+
+            TestButton testButton2 = new TestButton(this, Text, 300,  300, 100, 100);
+            Controls.Add(testButton2);
             //TestButton testButton = new TestButton(400,40,100,100);
             // Controls.Add(testButton);
             //
@@ -45,7 +48,7 @@ namespace CS_From
             //
             // TestButton testButton10 = new TestButton(200, 120, 50, 40);
             // Controls.Add(testButton10);
-             _testLabel = new TestLabel("ラベルと申します", 10, 400, 500, 100);
+            _testLabel = new TestLabel("ラベルと申します", 10, 400, 500, 100);
             Controls.Add(_testLabel);
            
             _testBox = new TestTextBox("テキストボックスです",10,500,500,100);
@@ -58,7 +61,10 @@ namespace CS_From
         {
             _testLabel.TextUpdate(str);
         }
-        
 
+        public void ButtonUpdate(string str)
+        {
+            _testBox.TextUpdate(str);
+        }
     }
 }
