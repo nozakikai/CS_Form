@@ -27,9 +27,13 @@ namespace CS_From
            
         }
 
-        public void TextUpdate(string str)
+        public string TextReplacement(string str)
         {
+            string tmp = Text;
+
             Text = str;
+
+            return tmp;
 
         }
     }

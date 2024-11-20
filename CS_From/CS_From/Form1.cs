@@ -62,9 +62,11 @@ namespace CS_From
             _testLabel.TextUpdate(str);
         }
 
-        public void ButtonUpdate(string str)
+        public string ButtonLabelReplacement(string str)
         {
-            _testBox.TextUpdate(str);
+           string s = _testBox.TextReplacement(str);
+
+            return s;
         }
     }
 }

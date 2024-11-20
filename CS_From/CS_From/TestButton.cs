@@ -21,7 +21,7 @@ namespace CS_From
             //ClickイベントにOnClick 関数を登録
             //ボタンをクリックしたときに登録した関数を実行する
             Click += OnClick;
-            Click += OnClick2;
+            
 
             //ボタン内に文字を表示させる
             Text = moji.ToString();
@@ -37,17 +37,16 @@ namespace CS_From
 
         public void OnClick(object sender, EventArgs s) 
         {
-              _form1.LabelTextUpdate(Text);
+             string t = _form1.ButtonLabelReplacement(Text);
 
-              
-        }
+            Text = t;
 
-        public void OnClick2(object sender, EventArgs s)
-        {
-            _form1.ButtonUpdate(Text);
+            _form1.LabelTextUpdate(Text);
 
 
         }
+
+       
 
     }
 
